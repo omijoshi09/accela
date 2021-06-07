@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="header-bar" >
+    <img class="logo-img-home" src="../../assets/logo/accela_logo.jpg" alt="Gabadoo Logo">
+    <button mat-mini-fab class="btn-logout" title="Logout" (click)="logout()" aria-label="Logout">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab label="User Posts">
+      <app-personal-posts></app-personal-posts>
+    </mat-tab>
+    <mat-tab label="Other Posts">
+      <app-other-posts></app-other-posts>
+    </mat-tab>
+  </mat-tab-group>
+</div>

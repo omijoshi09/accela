@@ -2,26 +2,35 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
-## Development server
+## Compatible
+This project is suited with mobile and web application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to run
+The project can run by using command "ng serve" or "using package.json"
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project Task server
+Write an Angular or Ionic application to display data retrieved from the
+following endpoints:
+https://jsonplaceholder.typicode.com/users, 
+https://jsonplaceholder.typicode.com/posts
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The app should open to a simple login page. The page should consist of a text
+input area and a login button. The text area should accept an email address.
+The app should then try and find a user from the users endpoint with the
+entered email address (this can be done by providing the email parameter to
+the endpoint. Example: email=Sincere@april.biz
+Once logged in, the user should be redirected to a page with two tabs.
+The first tab should be titled 'User posts' and display posts by the user.
+Each post should be on its own 'card' and should contain the post title in
+bold, then the post body in a normal font. This page should scroll so that the
+user is able to see all posts. The user should also be able to
+create new posts from this page. (Note: While the post verb is supported by
+the posts endpoint, nothing 'posted' will actually be reflected on the next
+get. Just store the result of the post call locally to display in the list of
+posts).
+The second tab should be titled 'Other Posts' and should display posts by
+other users. Similar to the first tab, each post should be on its own 'card'.
+It should display the user name, post title and post body in that order. Also
+similar to the first tab, the user should be able to scroll to see more posts

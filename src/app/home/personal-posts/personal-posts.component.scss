@@ -1,0 +1,63 @@
+.personal-post-card {
+  width: 300px;
+  margin-top: 20px;
+  background-color: #F0F0F0	;
+}
+
+.personal-post-header {
+  padding: 20px;
+  justify-content: center;
+}
+
+.personal-post-title {
+  color: 	#A0A0A0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+// Add Product
+.add-post-box {
+  display: flex;
+  padding-top: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.add-icon-box {
+  margin-left: 10px;
+}
+
+.add-icon{
+  font-size: 2rem;
+  color: #005A9C;
+  cursor: pointer;
+}
+
+// Model
+.header-model-add-post{
+  background-color: #005A9C;
+  color: white;
+  font-weight: 600;
+  margin-top: -25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: -25px;
+  margin-right: -25px;
+  padding-left: 25px
+}
+
+.btn-add {
+  background-color: #005A9C;
+  color: white;
+}
+
+
+/* On screens that are 500px or less */
+@media screen and (max-width: 500px) {
+  .personal-post-card {
+    width: 85%;
+  }
+  .mat-card-box {
+    max-width: 100% !important;
+  }
+}

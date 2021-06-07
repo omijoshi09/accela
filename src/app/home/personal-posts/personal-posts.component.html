@@ -1,0 +1,66 @@
+<!--User post card-->
+<div class="add-post-box">
+  <h1>Add Post</h1>
+  <div class="add-icon-box">
+    <mat-icon (click)="openNewPostDialog(templateAddPost)" class="add-icon">add_circle</mat-icon>
+  </div>
+</div>
+<div fxLayout="row wrap">
+  <div fxFlex="25%" fxLayoutAlign=" stretch" class="mat-card-box" *ngFor="let personalPost of personalPostsInformation; let i = index">
+    <mat-card class="personal-post-card">
+      <mat-card-header class="personal-post-header">
+        <mat-card-title class="personal-post-title">{{personalPost.title ? personalPost.title : "Title" }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+         {{personalPost.body ? personalPost.body : "Body"}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Add New Post Model-->
+<ng-template #templateAddPost>
+  <h2 class="header-model-add-post" mat-dialog-title>Add New Post</h2>
+  <mat-dialog-content class="mat-typography">
+    <!--  POST -->
+    <div style="padding: 40px">
+      <form [formGroup]="addPostForm" >
+
+        <!--    Post Title -->
+        <mat-form-field>
+          <mat-label>Post Title</mat-label>
+          <input type="text"  matInput formControlName="titleFormControl" placeholder="ABC">
+          <mat-error *ngIf="addPostForm.controls.titleFormControl.errors?.required">
+            Please enter title name
+          </mat-error>
+        </mat-form-field>
+        <br>
+
+        <!--    Post Body -->
+        <mat-form-field class="product-form-header">
+          <mat-label>Post Body</mat-label>
+          <input type="text" class="" matInput formControlName="bodyFormControl" placeholder="This is body">
+          <mat-error *ngIf="addPostForm.controls.bodyFormControl.errors?.required">
+            Please enter body
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <div style="text-align: center">
+          <button mat-raised-button align
+                  class="btn-material-primary btn-add"
+                  [disabled]="addPostForm.invalid"
+                  (click)="addNewPost()">ADD PRODUCT
+          </button>
+
+        </div>
+      </form>
+
+    </div>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</ng-template>

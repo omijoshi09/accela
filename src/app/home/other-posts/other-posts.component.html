@@ -1,0 +1,18 @@
+<!--Card to show other posts-->
+<div fxLayout="row wrap">
+  <div fxFlex="25%" fxLayoutAlign=" stretch" class="mat-card-box" *ngFor="let otherPost of allOtherPostsDetails; let i = index">
+    <mat-card class="personal-post-card">
+      <mat-card-header class="personal-post-header">
+        <mat-card-title class="personal-post-title">{{otherPost.title ? otherPost.title : "Title" }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{otherPost.body ? otherPost.body : "Body"}}
+        </p>
+        <div class="mat-card-user-posted">
+          <mat-card-subtitle>- By {{otherPost.fullName}}</mat-card-subtitle>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
